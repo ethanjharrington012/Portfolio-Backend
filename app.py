@@ -1,8 +1,12 @@
 from flask import Flask, jsonify, request
+from flask_cors import CORS
 import requests
 from requests.auth import HTTPBasicAuth
-from flask_cors import CORS
+
 import random
+from dotenv import load_dotenv
+import os
+
 """
 to run go to 
 pwd
@@ -12,9 +16,11 @@ then when you do flask run go to:
 http://127.0.0.1:5000/get-genre
 to get a random genre of music
 """
+load_dotenv()
 
 app = Flask(__name__)
 CORS(app)
+
 
 @app.route('/get-genre', methods=['GET'])
 def get_genre():
@@ -57,3 +63,4 @@ def get_random_plant():
 
 if __name__ == '__main__':
     app.run(debug=False)
+
