@@ -1,0 +1,1 @@
+gunicorn = "Portfolio_backend:app"
