@@ -35,7 +35,8 @@ def get_genre():
 
 @app.route('/get-random-plant', methods=['GET'])
 def get_random_plant():
-    api_key = 'sk-tNg6654a89a4bda6b2865'  # Replace with your actual API key
+    api_key = os.getenv('API_KEY')
+ # Replace with your actual API key
     api_endpoint = f"https://perenual.com/api/species-list?key={api_key}"
 
     try:

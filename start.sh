@@ -1,1 +1,1 @@
-gunicorn = "Portfolio_backend:app"
+gunicorn "app:app"
